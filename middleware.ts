@@ -18,7 +18,7 @@ function getResearchHosts() {
 }
 
 function isResearchHost(hostname: string) {
-  const normalized = hostname.toLowerCase();
+  const normalized = hostname.toLowerCase().split(":")[0];
   const configuredHosts = getResearchHosts();
 
   if (configuredHosts.has(normalized)) {
